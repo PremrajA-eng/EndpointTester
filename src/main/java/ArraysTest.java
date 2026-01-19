@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ArraysTest {
 
@@ -30,6 +33,28 @@ public class ArraysTest {
 		arr3[5]="risod";
 		for(int i=0; i<arr3.length;i++) {
 			System.out.print(arr3[i] +" ");
-		}				
+		}		
+		ArrayList <String> a =new ArrayList<String>();
+		a.add("rahul");
+		a.add("shetty");
+		a.add("jadugar");
+		
+		System.out.println(a.get(0));
+		System.out.println(a.get(1));
+		
+		for(int i=0; i<a.size();i++)
+		{
+		System.out.println(	a.get(i));
+		}
+		for(String vol:a) {
+			System.out.println(vol);
+		}
+		System.out.println(a.contains("shetty"));
+		
+		String[] name= {"jadu", "kadse", "asda"};
+		List <String> nameArrayList=Arrays.asList(name);
+		System.out.println(nameArrayList.contains("asda"));
+		
 	}
+	
 }
