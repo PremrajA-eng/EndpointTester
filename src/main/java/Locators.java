@@ -15,8 +15,10 @@ public class Locators {
 		driver.findElement(By.name("inputPassword")).sendKeys("Prem@2626");
 		driver.findElement(By.className("submit")).click();
 		System.out.println(driver.findElement(By.cssSelector(".error")).getText());
-		
-
+        driver.findElement(By.linkText("Forgot your password?")).click();
+        
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("prem@gmail.com");
+        
 	}
 
 }
