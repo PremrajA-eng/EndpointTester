@@ -7,20 +7,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Locators2 {
 
 	public static void main(String[] args) throws InterruptedException {
-		String name="premraj";
-		WebDriver driver =new ChromeDriver();
+		String name = "premraj";
+		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-		// wait for 3 sec on page if any element is not visible and its applicable for every element
+		// wait for 3 sec on page if any element is not visible and its applicable for
+		// every element
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		driver.findElement(By.id("inputUsername")).sendKeys(name);
 		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
 		driver.findElement(By.className("submit")).click();
 		Thread.sleep(2000);
 		System.out.println(driver.findElement(By.tagName("p")).getText());
-	    Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
-	    Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(), "Hello "+name+",");
-	    driver.findElement(By.xpath("//button[text()='Log Out']")).click();
-	    driver.close();
+		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
+		Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(),
+				"Hello " + name + ",");
+		driver.findElement(By.xpath("//button[text()='Log Out']")).click();
+		driver.close();
 	}
 
 }
